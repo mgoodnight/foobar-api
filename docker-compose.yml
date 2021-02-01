@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+  foobar_api:
+    container_name: foobar_api_node
+    restart: on-failure
+    build: ./
+    command: ["/wait.sh", "db:3306", "--", "npm", "start"]
+    depends_on:
+      - db
+    ports:
+      - "3003:3003"
+  db:
+    container_name: foobar-mysql
+    image: mysql:8.0.20
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    environment:
+      "MYSQL_DATABASE": "${TYPEORM_DATABASE}"
+      "MYSQL_ROOT_PASSWORD": "${TYPEORM_PASSWORD}"
+    volumes:
+      - ./ddl/foobar.sql:/docker-entrypoint-initdb.d/foobar.sql
+    env_file: ./.env
