@@ -1,4 +1,5 @@
 
+
 # Foobar API #
 Barebones, simple user session management backend app
 
@@ -32,3 +33,6 @@ TYPEORM_ENTITIES = dist/entities/*.js
 `DELETE /session`
 
 `GET /user`
+
+### Sessions ###
+Sessions are JWT based via a cookie. Payload only stores the userId (auto-incremented primary key from MySQL).
