@@ -1,8 +1,8 @@
 import * as jwt from 'jsonwebtoken';
 
 /**
- * Class to create and verify JWT session tokens via Promise-based wrapper around `sign` and `verify`.
- * utils.promisify wasn't playing nice
+ * Class to create and verify JWT session tokens
+ * util.promisify and types weren't playing nice so opted for Promise wrappers
  *
  * @class SessionHelper
  */
