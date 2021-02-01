@@ -1,5 +1,5 @@
 {
-  "name": "foobar-api",
+  "name": "node-foobar-api",
   "version": "1.0.0",
   "description": "Old coding challenge that now acts as a dummy API backend for user sessions",
   "main": "dist/index.js",
@@ -50,20 +50,18 @@
     "start": "npm-run-all clean --parallel build:watch nodemon:debug --print-label",
     "clean": "rimraf ./dist",
     "lint": "tslint --project tslint.json",
-    "lint:auto": "tslint --project tslint.json --fix",
-    "nodemon:dev": "NODE_ENV=develop nodemon",
     "nodemon:debug": "NODE_ENV=develop DEBUG=express:* nodemon",
     "test": "NODE_ENV=develop mocha -r ts-node/register 'tests/**/*.spec.ts'",
     "test-single": "NODE_ENV=develop mocha -r ts-node/register"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mgoodnight/foobar-api.git"
+    "url": "git+https://github.com/mgoodnight/node-foobar-api.git"
   },
   "author": "Matt Goodnight",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mgoodnight/foobar-api/issues"
+    "url": "https://github.com/mgoodnight/node-foobar-api/issues"
   },
-  "homepage": "https://github.com/mgoodnight/foobar-api#readme"
+  "homepage": "https://github.com/mgoodnight/node-foobar-api#readme"
 }
