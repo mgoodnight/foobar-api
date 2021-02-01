@@ -113,7 +113,7 @@ class UserDao {
   }
 
   /**
-   * Update the User
+   * Public update method of User
    *
    * @param {(UserUpdateToApi)} updatedUser
    * @returns {Promise<boolean>}
@@ -131,7 +131,7 @@ class UserDao {
   }
 
   /**
-   * Update of User
+   * Private update method
    *
    * @private
    * @param {UserUpdateToApi} updatedUser

@@ -9,7 +9,7 @@ import routes from './routes';
 import { ConfigServer } from './interfaces/config';
 
 /**
- * Class to setup backend API
+ * Setup API Express app
  *
  * @export
  * @class Server
@@ -57,7 +57,7 @@ export class Server {
   }
 
   /**
-   * Creates a database connection and starts the application!
+   * Creates a database connection and starts the application
    *
    * @memberof Server
    */
@@ -66,8 +66,7 @@ export class Server {
       const port = config.get<ConfigServer>('server').port;
       this.app.listen(port, () => console.log(`Server listening on port ${port}`));
     }).catch(err => {
-      console.log(process.env)
-      console.error('TypeORM connection error', err)
+      console.error('TypeORM connection error', err);
     });
   }
 }
