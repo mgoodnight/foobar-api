@@ -24,7 +24,11 @@ TYPEORM_ENTITIES = dist/entities/*.js
 
 ### Routes ###
 `POST /user`
+
 `PUT /user`
+
 `POST /session`
+
 `DELETE /session`
+
 `GET /user`
